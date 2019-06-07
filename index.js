@@ -69,18 +69,18 @@ async function main() {
 
     await browser.close();
   
-  // //process and download image
-  // for(let i = 0; i < imageSrcSets.length; i++) {
-  //   const srcSet = imageSrcSets[i];
-  //   const splitedSrcs = srcSet.split(',');
-  //   const imgSrc = splitedSrcs[splitedSrcs.length - 1].split(' ')[0];
+  //process and download image
+  for(let i = 0; i < imageSrcSets.length; i++) {
+    const srcSet = imageSrcSets[i];
+    const splitedSrcs = srcSet.split(',');
+    const imgSrc = splitedSrcs[splitedSrcs.length - 1].split(' ')[0];
 
-  //   const options = {
-  //     url: imgSrc,
-  //     dest: './images'
-  //   }
-  //   downloadIMG(options);
-  // }
+    const options = {
+      url: imgSrc,
+      dest: './images'
+    }
+    downloadIMG(options);
+  }
 }
 
 main();
